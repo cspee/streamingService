@@ -1,0 +1,586 @@
+/* обнуляем все настройки по умолчанию */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* меняет подсчет ширины блока для удобства */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* убираем линии обводки у браузеров */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* делаем значения блочными */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+/* уравниваем поведение шрифтов и элементов для разных браузеров */
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+/* просим теги наследовать семейство шрифта */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+/* убираем некоторые особенности в разных браузерах */
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* обнуляем заголовки h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+/* ------------------------------------ */
+
+body {
+  background-color: #1e1e1e;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  background-color: #1e1e1e;
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.container-header {
+  margin: 0 auto;
+  padding: 23px 0;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navBar-links {
+  display: flex;
+  gap: 15px;
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #f7f7f809;
+  border-radius: 12px;
+  padding: 10px 40px;
+}
+
+.link {
+  color: gray;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 14px 24px;
+}
+
+.active {
+  color: white;
+  border: 2px solid #f7f7f809;
+  border-radius: 8px;
+  padding: 14px 24px;
+}
+
+.logo {
+  display: flex;
+  height: 840px;
+  position: relative;
+}
+
+.logo-img {
+  position: absolute;
+  border-radius: 12px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  max-height: 500px;
+  padding: 0 50px;
+  gap: 50px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #999;
+}
+
+.logo-textTitle {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 150%;
+  text-align: center;
+  color: white;
+}
+
+.logo-actions {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-playBtn {
+  border-radius: 8px;
+  padding: 14px 24px;
+  width: 157px;
+  height: 56px;
+  background-color: red;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 153%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.logo-likeBtn,
+.logo-plusBtn,
+.logo-soundBtn {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 14px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-toLeftBtn,
+.logo-toRightBtn {
+  background-color: none;
+  background: none;
+}
+
+.navBar-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-size: 27px;
+}
+
+.navActions {
+  display: flex;
+  gap: 17px;
+}
+
+.genres {
+  margin-top: 180px;
+  padding: 0 50px;
+  color: white;
+}
+
+.genres-our {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  max-height: 350px;
+}
+
+.genres-img {
+  max-width: 243px;
+  max-height: 281px;
+  border-radius: 12px;
+}
+
+.genres-movieList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  background-color: #1a1a1a;
+}
+
+.genres-releaseText {
+  font-weight: 500;
+  font-size: 16px;
+  color: #999;
+}
+
+.genres-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 24px;
+  width: 116px;
+  height: 50px;
+  background-color: #e50000;
+}
+
+.genres-ourActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.genres-specialTitle {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 150%;
+}
+
+.genres-movies,
+.genres-shows {
+  border: 1px solid #302e2e;
+  border-radius: 12px;
+  padding: 0 50px;
+}
+
+.genres-shows {
+  margin-top: 150px;
+}
+
+.oneMovie-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin: 0 auto;
+  gap: 30px;
+  padding: 20px 50px;
+}
+
+.oneMovie {
+  position: relative;
+  display: flex;
+  height: 800px;
+  color: white;
+}
+
+.oneMovie-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 150%;
+}
+
+.oneMovie-paragraph {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+}
+
+.oneMovie-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.oneMovie-playBtn {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 14px 24px;
+  background-color: red;
+  width: 157px;
+  height: 56px;
+}
+
+.oneMovie-btn {
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 14px;
+  width: 56px;
+  height: 56px;
+  background-color: #262626;
+}
+
+.oneMovie-playBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.oneMovie-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oneMovie-description {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 50px;
+  max-height: 195px;
+}
+
+.oneMovie-descriptionTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #999;
+}
+
+.oneMovie-descriptionText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: white;
+}
+
+.oneMovie-cast {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 50px;
+  max-width: 1057px;
+}
+
+.oneMovie-castImg {
+  border-radius: 12px;
+  max-width: 150px;
+}
+
+.oneMovie-info {
+  margin-top: 100px;
+}
+
+.oneMovie-leftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.oneMovie-castTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #999;
+}
+
+.oneMovie-castHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.oneMovie-reviews {
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.oneMovie-reviews-titleContaienr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoMain {
+  position: relative;
+}
+
+.mySwiper {
+  position: relative;
+}
+
+.logo-changeLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 76px;
+  height: 50px;
+}
+
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  display: none;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  z-index: 10;
+}
+
+.mySwiper .swiper-pagination {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-container {
+  position: relative;
+  background-color: yellow;
+  width: 800px;
+  height: 600px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.modal-trailer {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.modal-close {
+  background-color: white;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+  left: 90%;
+  top: 10px;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.oneMovie-reviews-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #999;
+}
+
+.oneMovie-reviewContainer {
+  border-radius: 12px;
+  padding: 40px;
+  background-color: #060606;
+}
+
+.oneMovie-reviewContainer-author {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: white;
+}
+
+.oneMovie-reviewContainer-content {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #999;
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.oneMovie-reviewActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.oneMovie-castActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.oneMovie-castActionsLeftBtn,
+.oneMovie-castActionsRightBtn {
+  border-radius: 100px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  background-color: #141414;
+}
